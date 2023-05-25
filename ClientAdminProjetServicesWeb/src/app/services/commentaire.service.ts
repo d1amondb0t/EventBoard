@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CommentaireService {
-  private apiUrl = 'https://localhost:44312/api/Commentaire';
+  private apiUrl = 'https://localhost:59250/api/Commentaire';
 
   constructor(private http: HttpClient) { }
 
