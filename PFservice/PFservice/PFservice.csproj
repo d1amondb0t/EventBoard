@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>76b7ccf1-fe6b-4588-a52a-4ee43d1e0af7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +12,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
     <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.33" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.17.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
