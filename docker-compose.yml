@@ -1,0 +1,17 @@
+version : '3.7'
+
+services:
+  frontend:
+    build: ./ClientAdminProjetServicesWeb/
+    container_name: frontend_event_board
+    ports: 
+      - 4200:80
+  backend:
+    image: ${DOCKER_REGISTRY-}pfservice
+    build: 
+      context: ./PFService/
+      dockerfile: PFservice/Dockerfile
+    container_name: backend_event_board
+    ports:
+      - 80
+      - 443
