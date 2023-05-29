@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { UtilisateurService } from './services/utilisateur.service';
-import { Utilisateur } from './entities/utilisateur';
+import { Utilisateur } from 'src/app/entities/utilisateur';
 import { UtilisateurEvenement } from './entities/UtilisateurEvenement';
 
 @Component({

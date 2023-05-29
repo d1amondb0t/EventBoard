@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Utilisateur } from '../entities/utilisateur';
+import { Utilisateur } from 'src/app/entities/utilisateur';
 import { LoginInfo } from '../entities/loginInfo';
 import { Observable } from 'rxjs';
 import { DeleteKey } from '../entities/deleteKey';
@@ -16,7 +16,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UtilisateurService {
-  private apiUrl = 'https://localhost:59250/api/Utilisateur';
+  private apiUrl = 'https://localhost:32768/api/Utilisateur';
 
   constructor(private http: HttpClient) { }
 
