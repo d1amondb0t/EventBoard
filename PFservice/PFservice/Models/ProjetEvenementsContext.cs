@@ -28,7 +28,7 @@ namespace PFservice.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySQL("user id=root;password=root;server=localhost;sslmode=None;allowpublickeyretrieval=True;port=3308;database=projetevenements;persistsecurityinfo=True");
+                optionsBuilder.UseMySQL("server=db_event_board;userid=root;persistsecurityinfo=True;allowpublickeyretrieval=True;sslmode=None;port=3306;database=projetevenements");
             }
         }
 
