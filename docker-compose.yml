@@ -7,19 +7,21 @@ services:
     ports: 
       - 4200:80
     depends_on:
-      - "backend"
-
+      - backend
   backend:
     image: ${DOCKER_REGISTRY-}pfservice
     container_name: backend_event_board
     build: 
       context: ./PFService/
       dockerfile: PFservice/Dockerfile
-    expose:
-      - 32768:443
-      - 32769:80
+    ports:
+      - 5003:5003
+      - 5002:5002
+    environment:
+      MYSQL_DB_USER: root
+      MYSQL_DATABASE_NAME: projetevenements
     depends_on:
-      - "db"
+      - db
   db:
     image: mysql:latest
     container_name: db_event_board
@@ -28,6 +30,6 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
       MYSQL_DATABASE: projetevenements
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - ./db-start:/docker-entrypoint-initdb.d
