@@ -14,12 +14,15 @@ services:
     build: 
       context: ./PFService/
       dockerfile: PFservice/Dockerfile
-    ports:
-      - 5003:5003
-      - 5002:5002
     environment:
-      MYSQL_DB_USER: root
-      MYSQL_DATABASE_NAME: projetevenements
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "50000:80"
+      - "50001:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
     depends_on:
       - db
   db:

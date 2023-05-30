@@ -16,7 +16,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UtilisateurService {
-  private apiUrl = 'https://localhost:32768/api/Utilisateur';
+  private apiUrl = 'https://localhost:50001/api/Utilisateur';
 
   constructor(private http: HttpClient) { }
 

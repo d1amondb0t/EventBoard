@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EvenementService {
-  private apiUrl = 'https://localhost:32768/api/Evenement';
+  private apiUrl = 'https://localhost:50001/api/Evenement';
 
   constructor(private http: HttpClient) { }
 
