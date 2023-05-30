@@ -32,7 +32,8 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
       MYSQL_DATABASE: projetevenements
+      MYSQL_ROOT_PASSWORD: root
     ports:
-      - 3306:3306
+      - 3307:3306
     volumes:
       - ./db-start:/docker-entrypoint-initdb.d
