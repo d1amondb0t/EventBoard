@@ -72,4 +72,4 @@
 
 ![Login](/images/deleteUtilisateur.png)
 
-## The events page is the same thing, but it shows the events and if you click for more details, you can see the posts related to the events and you can modify and delete the events and the comments.
+##### The events page is the same thing, but it shows the events and if you click for more details, you can see the posts related to the events and you can modify and delete the events and the comments.
