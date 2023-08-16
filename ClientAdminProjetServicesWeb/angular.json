@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "AdministateurUser"
+  "defaultProject": "AdministateurUser",
+  "cli": {
+    "analytics": false
+  }
 }
